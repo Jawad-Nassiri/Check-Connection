@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.connection-icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.status-bar.hidden {
+  display: none;
+}
+
+.status-bar.online {
+  background-color: #2ecc71;
+  color: white;
+  box-shadow: 0 -5px 15px rgba(46, 204, 113, 0.4);
+}
+
+.status-bar.offline {
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 -5px 15px rgba(231, 76, 60, 0.4);
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 20px;
+      width: 95%;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+}
